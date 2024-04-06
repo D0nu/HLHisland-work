@@ -1,5 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';
-import './Footer.css';
+import './Footer.css'
 import { Link } from 'react-router-dom';
 
 const linkStyle = {

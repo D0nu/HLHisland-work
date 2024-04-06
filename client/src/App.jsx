@@ -10,10 +10,13 @@ import QualityPolicy from "./Pages/Quality/QualityPolicy";
 import SignIn from "./Pages/Login/SignIn";
 import SignUp from "./Pages/Login/SignUp";
 import Blogs from "./Pages/Blogs/Blog";
+import Footer from "./Components/Footer/Footer";
+import Navbar from "./Components/Navbar/Navbar";
 
 export default function App() {
-  return (
-    <BrowserRouter>
+return (
+  <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/" element={ <Home />} />
         <Route path="/about-us" element={ <About />} />
@@ -27,6 +30,7 @@ export default function App() {
         <Route path="/sign-up" element={ <SignUp />} />
         <Route path="/blogs" element={ <Blogs />} />
       </Routes>
-    </BrowserRouter>
+    <Footer/>
+  </BrowserRouter>
   )
 }
