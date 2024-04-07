@@ -1,0 +1,23 @@
+.signup{
+  margin-top: 5rem;
+  color: rgb(241, 245, 241);
+  padding: 3;
+}
+
+.s-title{
+  margin-top: 7rem;
+  font-size: 3.5rem;
+  font-weight: 600;
+  align-items: center;
+  font-family: Poppins;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+.s-details{
+  display: flex;
+  flex-direction: column;
+}
