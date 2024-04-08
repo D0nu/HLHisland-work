@@ -63,7 +63,7 @@ export default function SignUp() {
           <span className='text-orange-700'>Sign in</span>
         </Link>
       </div>
-      {error && <p className='text-red-500 mt-5'>{error.message}</p>}
+      {error && <p className='text-red-500 mt-5'>Credentials already exist</p>}
     </div>
   )
 }
