@@ -12,25 +12,32 @@ import SignUp from "./Pages/Login/SignUp";
 import Blogs from "./Pages/Blogs/Blog";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
+import { Provider } from 'react-redux';
+import { store } from './redux/store.js'; // 
+import PrivateRoute from "./Components/utility/PrivateRoute.jsx";
 
 export default function App() {
 return (
-  <BrowserRouter>
-    <Navbar/>
-      <Routes>
-        <Route path="/" element={ <Home />} />
-        <Route path="/about-us" element={ <About />} />
-        <Route path="/lagos" element={ <Lagos />} />
-        <Route path="/houston" element={ <Houston />} />
-        <Route path="/abu-dhabi" element={ <AbuDhabi />} />
-        <Route path="/contact-us" element={ <ContactUs />} />
-        <Route path="/profile" element={ <Profile />} />
-        <Route path="/qualitypolicy" element={ <QualityPolicy />} />
-        <Route path="/sign-in" element={ <SignIn />} />
-        <Route path="/sign-up" element={ <SignUp />} />
-        <Route path="/blogs" element={ <Blogs />} />
-      </Routes>
-    <Footer/>
-  </BrowserRouter>
+  <Provider store={store}>
+      <BrowserRouter>
+        <Navbar/>
+          <Routes>
+            <Route path="/" element={ <Home />} />
+            <Route path="/about-us" element={ <About />} />
+            <Route path="/lagos" element={ <Lagos />} />
+            <Route path="/houston" element={ <Houston />} />
+            <Route path="/abu-dhabi" element={ <AbuDhabi />} />
+            <Route path="/contact-us" element={ <ContactUs />} />
+            <Route element={<PrivateRoute/>} >
+              <Route path="/profile" element={ <Profile />} />
+            </Route>
+            <Route path="/qualitypolicy" element={ <QualityPolicy />} />
+            <Route path="/sign-in" element={ <SignIn />} />
+            <Route path="/sign-up" element={ <SignUp />} />
+            <Route path="/blogs" element={ <Blogs />} />
+          </Routes>
+        <Footer/>
+      </BrowserRouter>
+  </Provider>
   )
 }
