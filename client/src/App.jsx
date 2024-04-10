@@ -15,6 +15,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Provider } from 'react-redux';
 import { store } from './redux/store.js'; // 
 import PrivateRoute from "./Components/utility/PrivateRoute.jsx";
+import AdminRoute from "./Components/utility/AdminRoute.jsx";
+import CreateProperty from "./Pages/CreatePropertry/CreateProperty.jsx";
 
 export default function App() {
 return (
@@ -35,6 +37,9 @@ return (
             <Route path="/sign-in" element={ <SignIn />} />
             <Route path="/sign-up" element={ <SignUp />} />
             <Route path="/blogs" element={ <Blogs />} />
+            <Route element={<AdminRoute />}>
+              <Route path="/createprop" element={ <CreateProperty />} />
+            </Route>
           </Routes>
         <Footer/>
       </BrowserRouter>
