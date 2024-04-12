@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './Routes/user.route.js';
 import authRouter from './Routes/auth.routes.js';
+import emailRouter from './Routes/email.route.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/email', emailRouter);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
