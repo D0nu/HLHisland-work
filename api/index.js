@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRouter from './Routes/user.route.js';
 import authRouter from './Routes/auth.routes.js';
 import emailRouter from './Routes/email.route.js';
+import listingRouter from './Routes/listing.route.js'
 import cookieParser from 'cookie-parser';
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(cookieParser());
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/email', emailRouter);
+app.use('/api/listing', listingRouter);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;

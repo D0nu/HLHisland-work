@@ -39,6 +39,9 @@ class Navbar extends Component {
               <li><Link to="/blogs" style={linkStyle}>Blogs</Link></li>
               <li><Link to="/contact-us" style={linkStyle}>Contact us</Link></li>
               <li><Link to="/qualitypolicy" style={linkStyle}>Quality Policy</Link></li>
+              {currentUser && currentUser.role === 'admin' && (
+                <li><Link to="/createprop" style={linkStyle}>Add Property</Link></li>
+              )}
               <Link to='/profile'>
                 {currentUser ? (
                   <img className='rounded-full h-10 w-10 object-cover' src={currentUser.avatar || defaultAvatarUrl} alt='profile' />
