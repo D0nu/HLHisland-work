@@ -209,7 +209,7 @@ export default function CreateProperty() {
                 <button
                 type='button'
                 onClick={() => handleRemoveImage(index)}
-                className='text-red-700 p-3 rounded-lg hover:opacity-75'>Delete</button>
+                className='text-red-600 p-3 rounded-lg hover:opacity-75'>Delete</button>
             </div>
           ))}
           <button className='bg-orange-700 text-black p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80 font-semibold'>Create Listing</button>
