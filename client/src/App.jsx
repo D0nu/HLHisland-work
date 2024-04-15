@@ -18,6 +18,7 @@ import PrivateRoute from "./Components/utility/PrivateRoute.jsx";
 import AdminRoute from "./Components/utility/AdminRoute.jsx";
 import CreateProperty from "./Pages/CreatePropertry/CreateProperty.jsx";
 import Listing from "./Pages/Properties/Listing.jsx";
+import Search from "./Pages/Properties/Search.jsx"
 
 export default function App() {
 return (
@@ -31,14 +32,15 @@ return (
             <Route path="/lagos" element={ <Lagos />} />
             <Route path="/houston" element={ <Houston />} />
             <Route path="/abu-dhabi" element={ <AbuDhabi />} />
-            <Route path="/contact-us" element={ <ContactUs />} />
+            <Route path="/search" element={ <Search />} />
             <Route element={<PrivateRoute/>} >
+              <Route path="/contact-us" element={ <ContactUs />} />
               <Route path="/profile" element={ <Profile />} />
+              <Route path="/blogs" element={ <Blogs />} />
+              <Route path="/qualitypolicy" element={ <QualityPolicy />} />
             </Route>
-            <Route path="/qualitypolicy" element={ <QualityPolicy />} />
             <Route path="/sign-in" element={ <SignIn />} />
             <Route path="/sign-up" element={ <SignUp />} />
-            <Route path="/blogs" element={ <Blogs />} />
             <Route element={<AdminRoute />}>
               <Route path="/createprop" element={ <CreateProperty />} />
             </Route>
