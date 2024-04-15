@@ -51,6 +51,10 @@ const listingSchema = new mongoose.Schema(
       enum: ['Lagos', 'Houston', 'Abu-Dhabi'], // Define available city options
       required: true,
     },
+    userRef: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

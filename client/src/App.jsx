@@ -17,6 +17,7 @@ import { store } from './redux/store.js'; //
 import PrivateRoute from "./Components/utility/PrivateRoute.jsx";
 import AdminRoute from "./Components/utility/AdminRoute.jsx";
 import CreateProperty from "./Pages/CreatePropertry/CreateProperty.jsx";
+import Listing from "./Pages/Properties/Listing.jsx";
 
 export default function App() {
 return (
@@ -25,6 +26,7 @@ return (
         <Navbar/>
           <Routes>
             <Route path="/" element={ <Home />} />
+            <Route path="/listing/:listingId" element={<Listing />} />
             <Route path="/about-us" element={ <About />} />
             <Route path="/lagos" element={ <Lagos />} />
             <Route path="/houston" element={ <Houston />} />
